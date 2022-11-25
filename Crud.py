@@ -2,6 +2,7 @@ import pymysql.cursors
 import pymysql
 from contextlib import contextmanager
 
+# CRUD com python e pymysql
 
 @contextmanager
 def conecta():
@@ -62,7 +63,11 @@ def conecta():
 #         conexao.commit()
 
 # Atualizando alguns valores
-
+# with conecta() as conexao:
+#     with conexao.cursor() as cursor:
+#         sql = 'UPDATE clientes SET sobrenome=%s WHERE id=%s'
+#         cursor.execute(sql, ('Roza', 3))
+#         conexao.commit()
 
 # fechando a conexao
 with conecta() as conexao:

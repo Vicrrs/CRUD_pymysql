@@ -19,13 +19,13 @@ def conecta():
         print('Conexão fechada')
         conexao.close()
 
+    # Vizualizando as modificações no banco
+    # with conecta() as conexao:
+    #     with conexao.cursor() as cursor:
+    #         sql = 'INSERT INTO clientes (nome, sobrenome, idade, peso) VALUES (%s, %s, %s, %s)'
+    #         cursor.execute(sql, ('João', 'Sena', 24, 69))
+    #         conexao.commit()
 
-# Vizualizando as modificações no banco
-# with conecta() as conexao:
-#     with conexao.cursor() as cursor:
-#         sql = 'INSERT INTO clientes (nome, sobrenome, idade, peso) VALUES (%s, %s, %s, %s)'
-#         cursor.execute(sql, ('João', 'Sena', 24, 69))
-#         conexao.commit()
 
 # inserindo vários clientes
 # with conecta() as conexao:
@@ -39,6 +39,30 @@ def conecta():
 #         # varios valores
 #         cursor.executemany(sql, dados)
 #         conexao.commit()
+
+# deletando um cliente
+# with conecta() as conexao:
+#     with conexao.cursor() as cursor:
+#         sql = 'DELETE FROM clientes WHERE id = %s'
+#         cursor.execute(sql, (6,))
+#         conexao.commit()
+
+# # deletando vários clientes
+# with conecta() as conexao:
+#     with conexao.cursor() as cursor:
+#         sql = 'DELETE FROM clientes WHERE id IN (%s, %s, %s)'
+#         cursor.execute(sql, (7, 8, 9))
+#         conexao.commit()
+
+# deletando varios valores /2
+# with conecta() as conexao:
+#     with conexao.cursor() as cursor:
+#         sql = 'DELETE FROM clientes WHERE id BETWEEN %s AND %s'
+#         cursor.execute(sql, (10, 12))
+#         conexao.commit()
+
+# Atualizando alguns valores
+
 
 # fechando a conexao
 with conecta() as conexao:

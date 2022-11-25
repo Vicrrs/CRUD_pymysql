@@ -20,12 +20,12 @@ def conecta():
         print('Conexão fechada')
         conexao.close()
 
-    # Vizualizando as modificações no banco
-    # with conecta() as conexao:
-    #     with conexao.cursor() as cursor:
-    #         sql = 'INSERT INTO clientes (nome, sobrenome, idade, peso) VALUES (%s, %s, %s, %s)'
-    #         cursor.execute(sql, ('João', 'Sena', 24, 69))
-    #         conexao.commit()
+# Insere registro na base de dados
+# with conecta() as conexao:
+#     with conexao.cursor() as cursor:
+#         sql = 'INSERT INTO clientes (nome, sobrenome, idade, peso) VALUES (%s, %s, %s, %s)'
+#         cursor.execute(sql, ('João', 'Sena', 24, 69))
+#         conexao.commit()
 
 
 # inserindo vários clientes
